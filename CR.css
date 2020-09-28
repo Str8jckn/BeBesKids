@@ -1,0 +1,134 @@
+*{  margin: 0;
+    padding: 0;}
+
+ body{
+     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+     text-align: center;
+
+     
+}
+header{
+    background-image: url(/Applications/Firefox.app/Contents/Project/img/whitecode.jpg); 
+    width: 100%;
+    height: 400px;
+    background-position: center center;
+    background-size: cover;
+    color: #015d87;
+    text-align: center;
+    padding: 20px;
+    
+} 
+header  h1{
+font-size: 35px;
+font-weight: 400;
+text-align: center;
+margin-bottom: 20px;
+letter-spacing: 5px;
+
+}
+nav a: :last-of-type{
+    padding-bottom: 0px;
+
+}
+
+nav a{
+    text-align: center;
+    background-color: black;
+    color: white;
+    padding-right: 10px;
+    padding-left: 10px;
+    text-decoration: none;
+}
+nav a:hover{
+    background-color: yellowgreen;
+    border-radius: 10px;
+}
+@media(min-width:768px){
+    *{  margin: 0;
+        padding: 0;}
+    main{
+        margin-top:20px;
+        border: #015d87;
+
+    }
+    img{
+        max-width: 100%;
+        width: 400px;
+        border: 5px solid #015d87;
+        border-radius: 75%;
+        border-style: groove;
+    }
+
+     body{
+         font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+         text-align: auto;
+         text-align-last: auto;
+        background-blend-mode: luminosity;
+         
+    }
+    header{
+        background-image: url(/Applications/Firefox.app/Contents/Project/img/coding-background-texture.jpg); 
+        width: 100%;
+        height: 400px;
+        background-position: center center;
+        background-size: cover;
+        color: #015d87;
+        text-align: center;
+        padding: 20px;
+        font-family: cursive;
+ }
+    header h2{
+        padding-top: 20px;
+    }
+    header h2 p i{
+        padding-top: 20px;
+    }
+ header h3{
+    text-decoration: none; 
+
+}
+     nav{
+            text-align: center;
+            background-color: black;
+            color: white;
+            padding-right: 10px;
+            padding-left: 10px;
+    }       
+    nav a{
+            color: white;
+            text-decoration: none;
+            font-size: 25px;
+            
+
+    }
+    nav a:hover{
+            background-color: yellowgreen;
+
+        
+    }
+}
+img{max-width: 100%;}
+    main img{
+        max-width: 300px;
+        border: 15px;
+
+    }
+
+    #btn{
+        text-align: center;
+
+        background-color: #015d87;
+        width: 150px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-left: auto;
+        margin-right: auto;
+        text-decoration: none;
+    }
+
+    .container{
+       width: 80%;
+       margin-left: auto;
+       margin-right: auto;
+
+    }
