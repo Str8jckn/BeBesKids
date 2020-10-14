@@ -1,0 +1,27 @@
+*{
+    margin: 2;
+    padding: 0;
+    text-align: center;
+    text-decoration: burlywood;
+    font-size: 2.2rem;
+    color:gray;
+    flex-wrap: inherit;
+    background-attachment: fixed;
+    background-size: contain;
+    text-decoration: black;
+
+}
+#videoDiv {width: 100%; height: 360px; position: relative;}
+#video1 { margin: auto; display: block;}
+#videoMessage { position: absolute; top: 0; left: 0;
+display: flex;
+flex-direction: column; 
+justify-content: center;
+align-items: center; 
+width: 100%;
+height: 100%;}
+
+
+
+
+
