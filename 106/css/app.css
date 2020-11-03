@@ -1,0 +1,88 @@
+
+
+h1{
+    color: red;
+    margin-top: 2;
+    padding: 10px;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image:url("../img/todo.jpg");
+    background-color:;
+    text-align: left;
+    font-size: 20px;
+    color:  #015D87;
+    
+  
+
+
+}
+
+#todoText{
+    font-size: 1rem;
+    border-radius: 10px;
+}
+
+.buttonfx{ 
+    color: black; 
+    outline: none;
+    background: transparent;
+    border: none;
+    border-bottom: 4px solid gray;
+    letter-spacing: 0.0625em;
+    padding: 8px 10px; 
+    text-transform: uppercase;
+    font: bold 16px 'Bitter', cursive; 
+    line-height: 2;
+    position: relative;
+      display: inline-block;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+      text-decoration: none; 
+    overflow: hidden;
+    transition: all .5s;
+    border-radius: 10px;
+
+
+}
+
+.buttonfx:before,
+.buttonfx:after{
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  background: #015d87; 
+  z-index: -1;
+  transform: translate3D(0,-100%,0); 
+  transition: all .5s;
+  border-radius: 10px;
+  
+}
+
+.buttonfx:before{
+  background:whitesmoke;
+  z-index: -2;
+  transform: translate3D(0,0,0);
+  border-radius: 10px;
+}
+
+.buttonfx:hover{
+    color: white;
+    border-radius: 10px;
+}
+
+.buttonfx:hover:after{
+  transform: translate3D(0,0,0);
+  transition: all .5s;
+  border-radius: 10px;
+}
