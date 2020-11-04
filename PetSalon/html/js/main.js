@@ -15,16 +15,8 @@ var salon={
 
 }
 
-text=`
-    ${salon.name}, ${salon.address.street} ${salon.address.number}
-<br>
-It is open from ${salon.hours.open} to ${salon.hours.close}
-`;
-document.getElementById('footer-info').innerHTML=text;
 
-document.write(salon.pets)
-
-//var id=0;
+var id=0;
 
 class Pet{
     constructor(name,age,gender,type,breed,service,price,shots,ownersName,contactPhone){
@@ -38,7 +30,7 @@ class Pet{
         this.shots=shots;
         this.ownersName=ownersName;
         this.contactPhone=contactPhone;
-        //this.id=id++;
+        this.id=id++;
     }
 }
 
@@ -46,10 +38,7 @@ var scooby = new Pet ("Scooby", 50,"Male","Dog","Dane", "Full Service",20,"yes",
 var bugs = new Pet ("Bugs", 90,"Female","Rabbit","Bunny", "Hair Fluff",10, "no", "Mel Blanc","345-555-1930");
 var raphael = new Pet ("Raphael", 36,"Male","Turtle","Ninja", "Turtle Wax",8, "yes", "Splinter","800-111-1984");
 var daffy = new Pet ("Daffy", 83,"Male","Duck","Dane", "shampoo,Grooming",5,"yes", "Shaggy","800-867-1937");
-salon.pets.push(scooby);
-salon.pets.push(bugs);
-salon.pets.push(raphael);
-salon.pets.push(daffy);
+
 
 
 const txtName= document.getElementById('petName');
@@ -66,7 +55,7 @@ const txtcontactPhone= document.getElementById('contactPhone');
 function register(){
 var thePet = new Pet(txtName.value,txtAge.value,txtGender.value,txtType.value,txtBreed.value,txtService.value,txtPrice.value,txtShots.value,txtownersName.value,txtcontactPhone.value);
 salon.pets.push(thePet);
-display(thePet);
+displayTable(thePet);
 clear();
 registeredPets();
 profitCalculation();
@@ -87,31 +76,71 @@ function clear(){
 }
 
 function registeredPets(){
-    document.getElementById('registeredPets').innerHTML=` Number of Pets: ${salon.pets.length}`;
+    document.getElementById('registeredPets').innerHTML=` Number of pets: ${salon.pets.length}`;
+
 }
 
-/*function deletePet(petId){
-      for (ar i=0;i<salon.pets.length;i++){
+function profitCalculation(){
+        var total=0;
+        for(var i=0;i<salon.pets.length;i++ ){
+            total=total + Number(salon.pets[i].price);
+        }
+        document.getElementById('profits').innerHTML=`profits: $ ${total}`;
+}
+
+
+
+function deletePet(petId){
+      for (var i=0;i<salon.pets.length;i++){
         if(salon.pets[i].id===petId){
             indexDelete=i;}
         }
         salon.pets.splice(indexDelete,1);
             $('#' +petId).remove();
 } 
-*/
+
 function search(){
-    
-}
-
-function profitCalculation(){
-    var total=0;
-    for(var i=0;i<salon.pets.length;i++){
-    total=total + Number(salon.pets[i].price);
+  var searchString= $('petSearch').val();
+  var searchIndex;
+  for(var i=0;i<salon.pets.length;i++){
+      if (searchString.toLowerCase()===salon.pets[i].name.toLowerCase() || salon.pets[i].name.toLowerCase() )
+      {
+         searchIndex=i;
+      }
+        {
+           console.log("no")
+        }
     }
-    document.getElementById('profits').
-    innerHTML=`Profits: $ ${total}`;
+    
+    $('#'+searchIndex).addClass('highlight');
+    $('#'+searchService).addClass('highlight');
 
 }
 
-profitCalculation();
 
+
+
+
+function init(){
+    text=`
+    ${salon.name}, ${salon.address.street} ${salon.address.number}<br>
+    It is open from ${salon.hours.open} to ${salon.hours.close}
+`;
+    document.getElementById('footer-info').innerHTML=text;
+
+    salon.pets.push(scooby)
+    displayTable(scooby);
+    salon.pets.push(bugs);
+    displayTable(bugs)
+    salon.pets.push(raphael);
+    displayTable(raphael)
+    salon.pets.push(daffy);
+    displayTable(daffy)
+    registeredPets();
+    profitCalculation();
+    
+
+
+}
+
+window.onload=init;

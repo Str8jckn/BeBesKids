@@ -1,16 +1,11 @@
-console.log("directory");
 
-function display(){
-    var pets= salon.pets
-    const petSection= document.getElementById("pets");
+function display(pets){
     var text="";
-    var icon="";
+    
     var dogIcon='<i class="fas fa-dog"></i>';
     var catIcon='<i class="fas fa-cat"></i>';
     var birdIcon='<i class="fas fa-crow"></i>';
     
-    for(var i=0;i<pets.length;i++){
-        
         if(pets[i].type==="Dog"){
             icon= dogIcon;
         }else if(pets[i].type==="Cat"){
@@ -26,29 +21,51 @@ function display(){
         text+=`
         <div id="${pets.id} class="pet">
          ${icon}
-            <h2> Name:${pets[i].name} </h2> 
-            <p> Age: ${pets[i].age} </p> 
-            <p> type: ${pets[i].type} </p>
-            <p> Breed: ${pets[i].breed} </p>
-            <p> Gender: ${pets[i].gender} </p>
-            <p> Service: ${pets[i].service} </p>
-            <p>Price: $ ${pets[i].price} <p>
-            <p>shots: ${pets[i].shots} <p>
-            <p> Owner: ${pets[i].owner} </p>
-            <p> Contact: ${pets[i].contact} </p>
-          
+            <h2> Name:${pets.name} </h2> 
+            <p> Age: ${pets.age} </p> 
+            <p> type: ${pets.type} </p>
+            <p> Breed: ${pets.breed} </p>
+            <p> Gender: ${pets.gender} </p>
+            <p> Service: ${pets.service} </p>
+            <p>Price: $ ${pets.price} <p>
+            <p>shots: ${pets.shots} <p>
+            <p> Owner: ${pets.owner} </p>
+            <p> Contact: ${pets.contact} </p>
+            <button class=btn btn-danger" onclick='deletePet(${pets.id}) Delete </button>
+
         </div>
         `;   
-        
-    }
-
-    petSection.innerHTML=text;
-
+    $('#pets').append(text);
 }
 
 
-display();
 
 
-   
+function displayTable(pets){
+    var tr= `
+
+    <tr id="${pets.id}">
+         
+            <td>${pets.name} </td> 
+            <td>  ${pets.age} </td> 
+            <td>  ${pets.type} </td>
+            <td>  ${pets.breed} </td>
+            <td> ${pets.gender} </td>
+            <td>  ${pets.service} </td>
+            <td> ${pets.price} <td>
+            <td>${pets.shots} <td>
+            <td>  ${pets.ownersName} </td>
+            <td> ${pets.contactPhone} </td>
+            <button class=btn btn-danger" onclick='deletePet(${pets.id}) Delete </button>
+            </tr>`;
+            $('#petTable').append(tr)
+            ;
+        
+}
+
+
+
+
+
+
 
