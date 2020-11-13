@@ -1,0 +1,65 @@
+h1{
+    color: burlywood;
+    background-color: #9099a1;
+    text-align: center;
+}
+body{
+    height: 100%;
+    color:  #9099a1;    
+}
+
+.section{
+    display: inline-block;
+    vertical-align: top;
+
+}
+
+#task-table{
+   width: 100%;
+   background-color: #015D87;
+    height: 100%;
+    font-family: cursive;
+    color: #ffe39b;
+    margin-bottom: auto ;
+    
+}
+.form-group {
+    
+    margin: 25px 0;
+    font-size: 1.25rem;
+    font-family:inherit;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    background-color: #9099a1;
+    text-align: center;
+}
+
+}
+.control{
+    display: block;
+    margin-left: 15px;
+    margin-bottom: 10px;
+    border: .5px solid wheat;
+    border-radius: 1px;
+
+
+}
+
+#clear-task{
+   border: 1px solid #015d87;
+    display: flex;
+    background-color:burlywood;
+    margin-top: 10px;
+}
+.task-section{
+    flex: 1;
+
+
+}
+.task-description{
+    flex: 4;
+
+}
+#save{
+
+}
