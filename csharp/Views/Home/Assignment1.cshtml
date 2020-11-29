@@ -1,0 +1,97 @@
+@{
+    ViewData["Title"]="Assignment1";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head> 
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container justify-content-center d-inline">
+    <small class="text-light align-center d-inline-block col-md-6 text-center">
+    </small>
+  </div>
+</nav>
+
+<main role="main" class="container">
+  <div class="row mt-5">
+    <div class="col-12">
+      <p class="text-center">
+        <a class="btn btn-primary" data-toggle="collapse" href="#collapseItem" role="button" aria-expanded="false" aria-controls="collapseItem">New Task</a>
+      </p>
+      <div class="row justify-content-center">
+        <div class="col-md-9">
+          <div class="collapse multi-collapse" id="collapseItem">
+            <div class="card card-body">
+              <form id="newTaskForm">
+                <div class="form-group">
+                  <label for="titleFormControlInput">Title</label>
+                  <input type="text" class="form-control" name="title" id="titleFormControlInput" placeholder="Set your task name..." required />
+                </div>
+                <div class="form-group">
+                  <label for="descriptionFormControlTextarea">Description</label>
+                  <textarea class="form-control" id="descriptionFormControlTextarea" rows="2" name="description" placeholder="Say something about your task..."></textarea>
+                </div>
+                <div class="form-group">
+                  <label for="priorityFormControlSelect">Priority</label>
+                  <select class="form-control" id="priorityFormControlSelect" name="priority">
+                    <option value="1">Extremely important</option>
+                    <option value="2">Important</option>
+                    <option value="3">Need to do</option>
+                    <option value="4" selected>To do</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="finishAtFormControlDatetime">Finish at:</label>
+                  <input name="finishAt" type="time" id="finishAtFormControlDatetime" class="form-control" required />
+                </div>
+                <div class="row justify-content-center">
+                  <button type="reset" class="btn btn-danger mb-2 mt-2 mr-1">
+                    Close</button><button type="submit" class="btn btn-success mb-2 mt-2 ml-1">
+                    Set Task
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row mt-3">
+    <div class="col-12 d-inline-block">
+      <h2 class="col d-inline">Your daily task list:</h2>
+      <span class="col ml-2 d-inline text-muted small align-baseline">(click a task to complete it)</span>
+    </div>
+  </div>
+  <div class="row my-4 justify-content-center">
+    <div class="col-12">
+      <div id="task-list" class="list-group">
+
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-between mb-3">
+    <div class="col-md-4 mb-3">
+    
+    </div>
+    <div class="col-md-4 mb-3 text-center">
+      <div class="card">
+        <div class="card-body">
+          <p class="card-text text-muted font-weight-bold">
+            Do you want to delete all tasks?
+          </p>
+          <a class="btn btn-danger text-light" id="clearAll" href="#">Click me!</a>
+        </div>
+      </div>
+    </div>
+ 
+  </div>
+</main>
+
+<footer class="footer mt-5 py-3" id="footer">
+  <script src="/Applications/Firefox.app/Contents/Project/csharp/wwwroot/js/Assignment1.js"></script>
+  <div class="container">
+    <p class="text-center text-black-50 mb-0">
+    </p>
+  </div>
+</footer>
