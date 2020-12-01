@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/footer/footer";
 import Quantity from "./components/Quantity P/Quantity";
 import Product from "./components/Product/p1";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   return (
